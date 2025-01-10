@@ -17,10 +17,12 @@ function Footer() {
         {/* Navigation Links */}
         <div className="flex flex-col space-y-3">
           <h1 className="text-lg font-bold mb-2">Quick Links</h1>
-          <a href="#home" className="hover:text-gray-400 text-sm">Home</a>
-          <a href="#about" className="hover:text-gray-400 text-sm">About</a>
-          <a href="#services" className="hover:text-gray-400 text-sm">Services</a>
-          <a href="#contact" className="hover:text-gray-400 text-sm">Contact</a>
+          <a href="/" className="hover:text-gray-400 text-sm">Home</a>
+          <a href="/products" className="hover:text-gray-400 text-sm">Products</a>
+          <a href="/Contact" className="hover:text-gray-400 text-sm">Contact</a>
+          <a href="/Careers" className="hover:text-gray-400 text-sm">Careers</a>
+          <a href="Events" className="hover:text-gray-400 text-sm">Events</a>
+          <a href="/Downloads" className="hover:text-gray-400 text-sm">Downloads</a>
         </div>
 
         {/* Social Media Links and Contact Details */}
@@ -28,7 +30,7 @@ function Footer() {
           <h1 className="text-lg font-bold mb-2">Connect with Us</h1>
           <div className="flex space-x-4 mb-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/svrrobotics?mibextid=ZbWKwL"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
@@ -36,15 +38,15 @@ function Footer() {
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://www.youtube.com/watch?v=R1ZYQdM3C8E&t=9s"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-youtube"></i>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/_____svr.robotics/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
@@ -52,7 +54,7 @@ function Footer() {
               <i className="fab fa-instagram"></i>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/svr-robotics/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
@@ -84,6 +86,7 @@ function Footer() {
       <p className="text-center text-sm text-gray-400 mt-6">
         © {new Date().getFullYear()} SVR Robotics Pvt. Ltd. All rights reserved.
       </p>
+      
     </footer>
   );
 }

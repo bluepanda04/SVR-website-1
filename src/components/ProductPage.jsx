@@ -8,14 +8,17 @@ const ProductPage = () => {
   const sections = [
     {
       title: "Robot",
+      link:"robot",
       items: ["Articulated Robot", "Cobot", "Scara Robot", "Cartesian Robot"],
     },
     {
       title: "FMS",
+      link:"fms",
       items: ["Flexible/Electrofab/Modular/Smart Manufacturing System"],
     },
     {
       title: "SVR Innovation",
+      link:"svrinnovation",
       items: [
         "IoT, PLC, Manual Based Electro-Hydraulic System",
         "IoT, PLC, Manual Based Electro-Pneumatic System",
@@ -25,6 +28,7 @@ const ProductPage = () => {
     },
     {
       title: "Grippers",
+      link:"gripper",
       items: [
         "3-Jaw Concentric Gripper",
         "Suction Cup Gripper",
@@ -38,6 +42,7 @@ const ProductPage = () => {
     },
     {
       title: "PLC Application",
+      link:"plc",
       items: [
         "VFD Kit",
         "Elevator Simulation",
@@ -50,6 +55,7 @@ const ProductPage = () => {
     },
     {
       title: "School Robotics Lab",
+      link:"schoolinnovation",
       items: [
         "Maze Solving Robot",
         "Line Following Robot",
@@ -63,6 +69,7 @@ const ProductPage = () => {
     },
     {
       title: "Software",
+      link:"software",
       items: ["RoboAnalyzer", "MechAnalyzer", "FEAST", "RT Tool Box Software"],
     },
   ];
@@ -81,16 +88,17 @@ const ProductPage = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div> {/* Dark overlay for better readability */}
         <div className="flex flex-wrap justify-center gap-4 p-6 overflow-auto relative z-10">
           {sections.map((section, index) => (
+            
             <div
               key={index}
-              className="w-full sm:w-1/3 bg-gray-100 shadow-md rounded-lg p-4 text-center"
+              className="w-full sm:w-1/3 bg-gray-100 shadow-md rounded-lg p-4 text-center hover:bg-slate-300"
             >
-              <h3 className="text-xl font-bold mb-4">{section.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-orange-500">{section.title}</h3>
               <ul className="list-none">
                 {section.items.map((item, i) => (
                   <li key={i}>
                     <Link
-                      to={`/ProductDetails/product-val`}
+                      to={`/ProductDetails/${section.link}`}
                       state={{ stateParam: section }}
                     >
                       {item}

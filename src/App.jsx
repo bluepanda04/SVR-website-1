@@ -39,7 +39,7 @@ function App() {
             className="h-96 w-full flex justify-center items-center bg-[url('./assets/robo.jpg')] bg-no-repeat bg-center bg-cover rounded-md"
             ref={divRef}
           >
-            <div className="flex flex-col gap-4 justify-center items-center h-full w-1/2 bg-black bg-opacity-50 rounded-md">
+            <div className="flex flex-col gap-4 justify-center items-center h-full md:w-1/2 text-center bg-black bg-opacity-50 rounded-md">
               {/* Add animation classes based on state */}
               <h1
                 className={`text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${
@@ -53,8 +53,7 @@ function App() {
                   animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
                 }`}
               >
-                SVR Robotics is an AI and robotics company dedicated to creating socially intelligent machines that enrich the quality of our lives.
-              </p>
+SVR Robotics creates intelligent machines that enhance lives and empower human potential. </p>
             </div>
           </div>
         </div>
