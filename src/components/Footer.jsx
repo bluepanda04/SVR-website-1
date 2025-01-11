@@ -84,7 +84,7 @@ function Footer() {
         </div>
       </div>
       <p className="text-center text-sm text-gray-400 mt-6">
-        © {new Date().getFullYear()} SVR Robotics Pvt. Ltd. All rights reserved.
+        © {new Date().getFullYear()} SVR Robotics Pvt. Ltd. All rights reserved. Designed and Developed by <a href="https://www.linkedin.com/in/vaibhavchougule475" className='underline'>Vaibhav Chougule.</a>
       </p>
       
     </footer>

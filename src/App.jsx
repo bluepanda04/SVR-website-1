@@ -39,21 +39,19 @@ function App() {
             className="h-96 w-full flex justify-center items-center bg-[url('./assets/robo.jpg')] bg-no-repeat bg-center bg-cover rounded-md"
             ref={divRef}
           >
-            <div className="flex flex-col gap-4 justify-center items-center h-full md:w-1/2 text-center bg-black bg-opacity-50 rounded-md">
+            <div className="flex flex-col gap-4 justify-center items-center h-full md:w-2/3 text-center bg-black bg-opacity-50 rounded-md">
               {/* Add animation classes based on state */}
               <h1
-                className={`text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${
-                  animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
-                }`}
+                className={`text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
+                  }`}
               >
-                We bring robots to life.
+                Transforming Industries through turnkey Robotics and Automation Implementations.
               </h1>
               <p
-                className={`font-medium text-center text-lg text-white transition-all duration-1000 ease-in-out ${
-                  animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
-                }`}
+                className={`font-medium text-center text-lg text-white transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
+                  }`}
               >
-SVR Robotics creates intelligent machines that enhance lives and empower human potential. </p>
+                <span className='text-orange-500'>SVR Robotics</span> creates intelligent machines that enhance lives and empower human potential. </p>
             </div>
           </div>
         </div>

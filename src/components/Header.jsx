@@ -6,7 +6,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-blue-700 text-white px-4 sticky top-0 z-50 shadow-md">
+    <header className="bg-blue-700 text-white px-16 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center py-2">
         {/* Logo */}
         <div className="flex items-center">
