@@ -40,18 +40,20 @@ function App() {
             ref={divRef}
           >
             <div className="flex flex-col gap-4 justify-center items-center h-full md:w-2/3 text-center bg-black bg-opacity-50 rounded-md">
+            <h1 className={`text-4xl text-purple-500 font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
+                  }`}> <span className='text-purple-500'>S</span><span className='text-orange-500 text-5xl font-thin'>V</span><span className='text-purple-500'>R</span> ROBOTICS</h1>
               {/* Add animation classes based on state */}
               <h1
                 className={`text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
                   }`}
               >
-                Transforming Industries through turnkey Robotics and Automation Implementations.
+                Transforming Industries through Turnkey Robotics and Automation Implementations.
               </h1>
               <p
                 className={`font-medium text-center text-lg text-white transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
                   }`}
               >
-                <span className='text-orange-500'>SVR Robotics</span> creates intelligent machines that enhance lives and empower human potential. </p>
+                <span className='text-orange-500'>We</span> create intelligent machines that enhance lives and empower human potential. </p>
             </div>
           </div>
         </div>

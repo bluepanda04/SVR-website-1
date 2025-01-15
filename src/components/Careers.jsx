@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import config from "../config.js"
 
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState("View all");
+  console.log(config.API_URI);
+  
 
   const categories = [
     "View all",
@@ -130,7 +133,7 @@ const Careers = () => {
               {/* Conditionally render the Apply button */}
               {!job.description.startsWith("Currently, there are no vacancies") && (
                 <a
-                  href="#apply"
+                  href="/JobApplicationForm"
                   className="text-blue-600 font-medium hover:underline"
                 >
                   Apply →

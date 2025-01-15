@@ -6,41 +6,97 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-blue-700 text-white px-16 sticky top-0 z-50 shadow-md">
+    <header
+      className="text-white px-16 sticky top-0 z-50 shadow-md"
+      style={{ backgroundColor: "#2a2974" }} // Header background
+    >
       <div className="container mx-auto flex justify-between items-center py-2">
         {/* Logo */}
         <div className="flex items-center">
           <img
             src={svrlogo}
             alt="Logo"
-            className="h-12 w-auto m-2 bg-white rounded-md"
+            className="h-16 w-auto m-2 bg-white rounded-md"
           />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")} // Hover effect
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Home
           </Link>
           <Link
             to="/Products"
-            className="hover:text-gray-300 font-semibold text-lg"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
             Products
           </Link>
-          <Link to="/Contact" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/Contact"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Contact
           </Link>
-          <Link to="/Careers" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/Careers"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Careers
           </Link>
-          <Link to="/Events" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/Events"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Events
           </Link>
-          <Link to="/Downloads" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/Downloads"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Downloads
           </Link>
-          <Link to="/Support" className="hover:text-gray-300 font-semibold text-lg">
+          <Link
+            to="/Support"
+            className="font-semibold text-lg"
+            style={{
+              color: "#ffffff",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+          >
             Need Help?
           </Link>
         </nav>
@@ -52,6 +108,9 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300"
+            style={{ color: "#ffffff" }}
+            onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
             <i className="fab fa-facebook-f"></i>
           </a>
@@ -60,6 +119,9 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300"
+            style={{ color: "#ffffff" }}
+            onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
             <i className="fab fa-youtube"></i>
           </a>
@@ -68,6 +130,9 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300"
+            style={{ color: "#ffffff" }}
+            onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
             <i className="fab fa-instagram"></i>
           </a>
@@ -76,6 +141,9 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300"
+            style={{ color: "#ffffff" }}
+            onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
@@ -95,53 +163,29 @@ const Header = () => {
         <nav className="md:hidden bg-blue-600 py-4 space-y-4">
           <Link
             to="/"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
             onClick={() => setMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/Products"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
             onClick={() => setMenuOpen(false)}
           >
             Products
           </Link>
-          <Link
-            to="/Contact"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </Link>
-          <Link
-            to="/Careers"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
-            onClick={() => setMenuOpen(false)}
-          >
-            Careers
-          </Link>
-          <Link
-            to="/Events"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
-            onClick={() => setMenuOpen(false)}
-          >
-            Events
-          </Link>
-          <Link
-            to="/Downloads"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
-            onClick={() => setMenuOpen(false)}
-          >
-            Downloads
-          </Link>
-          <Link
-            to="/Support"
-            className="block text-center hover:text-gray-300 font-semibold text-lg"
-            onClick={() => setMenuOpen(false)}
-          >
-            Need Help?
-          </Link>
+          {/* Add other links here following the same pattern */}
         </nav>
       )}
     </header>

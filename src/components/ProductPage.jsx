@@ -8,17 +8,17 @@ const ProductPage = () => {
   const sections = [
     {
       title: "Robot",
-      link:"robot",
+      link: "robot",
       items: ["Articulated Robot", "Cobot", "Scara Robot", "Cartesian Robot"],
     },
     {
       title: "FMS",
-      link:"fms",
+      link: "fms",
       items: ["Flexible/Electrofab/Modular/Smart Manufacturing System"],
     },
     {
       title: "SVR Innovation",
-      link:"svrinnovation",
+      link: "svrinnovation",
       items: [
         "IoT, PLC, Manual Based Electro-Hydraulic System",
         "IoT, PLC, Manual Based Electro-Pneumatic System",
@@ -28,7 +28,7 @@ const ProductPage = () => {
     },
     {
       title: "Grippers",
-      link:"gripper",
+      link: "gripper",
       items: [
         "3-Jaw Concentric Gripper",
         "Suction Cup Gripper",
@@ -42,7 +42,7 @@ const ProductPage = () => {
     },
     {
       title: "PLC Application",
-      link:"plc",
+      link: "plc",
       items: [
         "VFD Kit",
         "Elevator Simulation",
@@ -55,7 +55,7 @@ const ProductPage = () => {
     },
     {
       title: "School Robotics Lab",
-      link:"schoolinnovation",
+      link: "schoolinnovation",
       items: [
         "Maze Solving Robot",
         "Line Following Robot",
@@ -69,7 +69,7 @@ const ProductPage = () => {
     },
     {
       title: "Software",
-      link:"software",
+      link: "software",
       items: ["RoboAnalyzer", "MechAnalyzer", "FEAST", "RT Tool Box Software"],
     },
   ];
@@ -78,28 +78,26 @@ const ProductPage = () => {
     <>
       <Header />
       <div
-        className="relative min-h-screen"
+        className="relative min-h-screen bg-cover bg-center"
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div> {/* Dark overlay for better readability */}
-        <div className="flex flex-wrap justify-center gap-4 p-6 overflow-auto relative z-10">
+        <div className="relative z-10 flex flex-wrap justify-center gap-6 p-8 sm:p-12">
           {sections.map((section, index) => (
-            
             <div
               key={index}
-              className="w-full sm:w-1/3 bg-gray-100 shadow-md rounded-lg p-4 text-center hover:bg-slate-300"
+              className="w-full sm:w-1/3 md:w-1/4 bg-gradient-to-r from-slate-600 to-slate-700 text-white shadow-lg rounded-xl p-6 hover:scale-105 transform transition-all duration-300"
             >
-              <h3 className="text-xl font-bold mb-4 text-orange-500">{section.title}</h3>
-              <ul className="list-none">
+              <h3 className="text-2xl font-bold text-center mb-6 text-orange-600">{section.title}</h3>
+              <ul className="space-y-4">
                 {section.items.map((item, i) => (
-                  <li key={i}>
+                  <li key={i} className="text-lg">
                     <Link
                       to={`/ProductDetails/${section.link}`}
                       state={{ stateParam: section }}
+                      className="block text-white hover:text-indigo-300 transition-colors duration-300"
                     >
                       {item}
                     </Link>
@@ -110,7 +108,7 @@ const ProductPage = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

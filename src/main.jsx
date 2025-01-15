@@ -10,6 +10,8 @@ import Downloads from './components/Downloads.jsx'
 import Events from './components/Events.jsx'
 import Careers from './components/Careers.jsx'
 import Support from './components/Support.jsx'
+import Dashboard from './components/Dashboard.jsx'
+import JobApplicationForm from './components/JobApplicationForm.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -22,6 +24,8 @@ createRoot(document.getElementById('root')).render(
     <Route path='/Events' element={<Events/>}></Route>
     <Route path='/Careers' element={<Careers/>}></Route>
     <Route path='/Support' element={<Support/>}></Route>
+    <Route path='/JobApplicationForm' element={<JobApplicationForm/>}></Route>
+    <Route path='/Admin' element={<Dashboard/>}></Route>
   </Routes>
   </BrowserRouter>
 )
