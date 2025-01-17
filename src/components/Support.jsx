@@ -14,13 +14,18 @@ const QuestionAnswer = () => {
   const questions = [
     {
       id: 1,
-      question: 'What is React?Lorem ipsum dolor sit amet, consectetur adisicing elit. Totam doloribus adipisci itaque error, dolore eos!',
+      question: 'What is React?',
       answer: 'React is a JavaScript library for building user interfaces.',
     },
     {
       id: 2,
       question: 'What is a component?',
       answer: 'A component is a reusable piece of code that manages its own state and renders UI.',
+    },
+    {
+      id: 3,
+      question: 'Can SVR Robotics help with custom robotics solutions?',
+      answer: 'Yes, we specialize in both educational and application-based robotics solutions and can customize them to suit your needs.',
     },
     // Add more questions here
   ];
