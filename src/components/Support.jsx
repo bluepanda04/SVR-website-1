@@ -27,6 +27,11 @@ const QuestionAnswer = () => {
       question: 'Can SVR Robotics help with custom robotics solutions?',
       answer: 'Yes, we specialize in both educational and application-based robotics solutions and can customize them to suit your needs.',
     },
+    {
+      id: 4,
+      question:'Is SVR Robotics affiliated with any organizations?',
+      answer: 'We are the official techno-commercial partner for FEAST, developed by VSSC ISRO.',
+    }, 
     // Add more questions here
   ];
 
