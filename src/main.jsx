@@ -12,6 +12,7 @@ import Careers from './components/Careers.jsx'
 import Support from './components/Support.jsx'
 import Dashboard from './components/Dashboard.jsx'
 import JobApplicationForm from './components/JobApplicationForm.jsx'
+import SpecificProduct from './components/SpecificProduct.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
     <Route path='/' element={<App/>}></Route>
     <Route path='/Products' element={<ProductPage/>}></Route>
     <Route path='/ProductDetails/:type' element={<ProductDetail/>}></Route>
+    <Route path='/Product/:productId' element={<SpecificProduct/>}></Route>
     <Route path='/Contact' element={<Contact/>}></Route>
     <Route path='/Downloads' element={<Downloads/>}></Route>
     <Route path='/Events' element={<Events/>}></Route>

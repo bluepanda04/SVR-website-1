@@ -112,10 +112,10 @@ const Header = () => {
             onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
             onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
-            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-facebook-f fa-lg"></i>
           </a>
           <a
-            href="https://www.youtube.com/watch?v=R1ZYQdM3C8E&t=9s"
+            href="https://www.youtube.com/@svrrobotics100"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300"
@@ -123,7 +123,7 @@ const Header = () => {
             onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
             onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
-            <i className="fab fa-youtube"></i>
+            <i className="fab fa-youtube fa-lg"></i>
           </a>
           <a
             href="https://www.instagram.com/_____svr.robotics/"
@@ -134,7 +134,7 @@ const Header = () => {
             onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
             onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram fa-lg"></i>
           </a>
           <a
             href="https://www.linkedin.com/company/svr-robotics/"
@@ -145,7 +145,7 @@ const Header = () => {
             onMouseEnter={(e) => (e.target.style.color = "#1784bc")}
             onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
-            <i className="fab fa-linkedin-in"></i>
+            <i className="fab fa-linkedin-in fa-lg"></i>
           </a>
         </div>
 
@@ -160,12 +160,12 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {menuOpen && (
-        <nav className="md:hidden bg-blue-600 py-4 space-y-4">
+        <nav className="md:hidden py-4 space-y-4">
           <Link
             to="/"
             className="block text-center font-semibold text-lg text-white"
             style={{
-              backgroundColor: "#0b6085",
+              backgroundColor: " #0b6085",
             }}
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
@@ -184,6 +184,66 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
           >
             Products
+          </Link>
+          <Link
+            to="/Contact"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link
+            to="/Careers"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Careers
+          </Link>
+          <Link
+            to="/Events"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Events
+          </Link>
+          <Link
+            to="/Downloads"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Downloads
+          </Link>
+          <Link
+            to="/Support"
+            className="block text-center font-semibold text-lg text-white"
+            style={{
+              backgroundColor: "#0b6085",
+            }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1784bc")}
+            onMouseLeave={(e) => (e.target.style.backgroundColor = "#0b6085")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Need Help?
           </Link>
           {/* Add other links here following the same pattern */}
         </nav>
