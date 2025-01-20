@@ -44,8 +44,9 @@ function App() {
                   }`}> <span className='text-purple-500'>S</span><span className='text-orange-500 text-5xl font-thin'>V</span><span className='text-purple-500'>R</span> ROBOTICS</h1>
               {/* Add animation classes based on state */}
               <h1
-                className={`text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
+                className={`text-2xl md:text-4xl text-white font-semibold font-serif transition-all duration-1000 ease-in-out ${animateText ? 'transform translate-y-0 opacity-100' : 'transform translate-y-10 opacity-0'
                   }`}
+                  style={{textShadow:'1px 3px 3px yellow'}}
               >
                 Transforming Industries through Turnkey Robotics and Automation Implementations.
               </h1>
