@@ -81,6 +81,7 @@ const ProductPage = () => {
         className="relative min-h-screen bg-cover bg-center"
         style={{
           backgroundImage: `url(${bg})`,
+          backgroundAttachment:'fixed'
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* Dark overlay */}
@@ -88,11 +89,11 @@ const ProductPage = () => {
           <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-12">
             Explore Our Product Categories
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {sections.map((section, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-b from-indigo-800 to-purple-900 text-white shadow-2xl rounded-lg p-6 hover:scale-105 transform transition-transform duration-300"
+                className="bg-gradient-to-b from-white to-slate-300 text-white shadow-2xl border-4 border-slate-500 rounded-lg p-6 hover:scale-105 transform transition-transform duration-300"
               >
                 <h3 className="text-2xl font-bold text-center mb-4 text-orange-400">
                   {section.title}
@@ -104,7 +105,7 @@ const ProductPage = () => {
                       <Link
                         to={`/ProductDetails/${section.link}`}
                         state={{ stateParam: section }}
-                        className="text-lg text-white hover:text-orange-300 transition-colors duration-300"
+                        className="text-lg text-black hover:text-orange-300 transition-colors duration-300"
                       >
                         {item}
                       </Link>

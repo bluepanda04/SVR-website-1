@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header
       className="text-white px-16 sticky top-0 z-50 shadow-md"
-      style={{ backgroundColor: "#2a2974" }} // Header background
+      style={{ backgroundColor: "rgb(1,0,80" }} // Header background
     >
       <div className="container mx-auto flex justify-between items-center py-2">
         {/* Logo */}
