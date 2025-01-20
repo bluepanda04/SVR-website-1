@@ -273,10 +273,9 @@ const MultiFormPage = () => {
             <strong>What is the typical response time for customer support?</strong>
             <p>Our support team aims to respond to queries within 24-48 hours.</p>
           </li>
-
           <li>
-            <strong>Do you offer product training?</strong>
-            <p>Yes, we provide personalized training and workshops for all our services.</p>
+            <strong>Do you provide training in robotics and automation?</strong>
+            <p>We offer training services for students and professionals in robotics, automation, and related technologies.</p>
           </li>
         </ul>
       </div>
