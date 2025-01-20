@@ -1,177 +1,262 @@
-import React, { useState } from 'react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import React, { useState } from "react";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 import config from "../config.js";
 
-const QuestionAnswer = () => {
-  const [chatOpen, setChatOpen] = useState(false);
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [domain, setDomain] = useState('');
-  const [message, setMessage] = useState('');
+const MultiFormPage = () => {
+  const [visibleForm, setVisibleForm] = useState(null);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    contactNo: "",
+    organizationName: "",
+    productName: "",
+    serviceName: "",
+    issueDescription: "",
+    query: "",
+    image: null,
+  });
 
-  const questions = [
-    {
-      id: 1,
-      question: 'What is React?Lorem ipsum dolor sit amet, consectetur adisicing elit. Totam doloribus adipisci itaque error, dolore eos!',
-      answer: 'React is a JavaScript library for building user interfaces.',
-    },
-    {
-      id: 2,
-      question: 'What is a component?',
-      answer: 'A component is a reusable piece of code that manages its own state and renders UI.',
-    },
-    // Add more questions here
-  ];
-
-  const handleChatClick = () => {
-    setChatOpen(true);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleCloseChat = () => {
-    setChatOpen(false);
+  const handleFileChange = (e) => {
+    setFormData({ ...formData, image: e.target.files[0] });
   };
 
-  const handleCallClick = () => {
-    alert('Calling...');
+  const resetFormData = () => {
+    setFormData({
+      fullName: "",
+      email: "",
+      contactNo: "",
+      organizationName: "",
+      productName: "",
+      serviceName: "",
+      issueDescription: "",
+      query: "",
+      image: null,
+    });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, formType) => {
     e.preventDefault();
 
-    const formData = {
-      username,
-      email,
-      domain,
-      message,
-    };
+    const formDataToSend = new FormData();
+    formDataToSend.append("fullName", formData.fullName);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("contactNo", formData.contactNo);
+    formDataToSend.append("organizationName", formData.organizationName);
+
+    if (formType === "Products") {
+      formDataToSend.append("productName", formData.productName);
+    }
+    if (formType === "Services") {
+      formDataToSend.append("serviceName", formData.serviceName);
+      formDataToSend.append("issueDescription", formData.issueDescription);
+    }
+    if (formType === "Training and Workshop" || formType === "Setup and Costing") {
+      formDataToSend.append("query", formData.query);
+    }
+    if (formData.image) {
+      formDataToSend.append("image", formData.image);
+    }
 
     try {
-      const response = await fetch(`${config.API_URI}/api/issues`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const response = await fetch(`${config.API_URI}/api/${formType.toLowerCase()}`, {
+        method: "POST",
+        body: formDataToSend,
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
-        setUsername('');
-        setEmail('');
-        setMessage('');
-        setChatOpen(false);
+        alert(`${formType} form submitted successfully!`);
+        resetFormData();
+        setVisibleForm(null);
       } else {
-        alert('Failed to send message. Please try again.');
+        alert("Failed to submit the form. Please try again.");
       }
     } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
+  const handleFormSwitch = (formType) => {
+    resetFormData(); // Reset form values
+    setVisibleForm(formType); // Set the new form as visible
+  };
+
+  const renderForm = (formType) => {
+    switch (formType) {
+      case "Services":
+        return (
+          <>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Service Name</label>
+              <input
+                type="text"
+                name="serviceName"
+                value={formData.serviceName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Describe Your Issue</label>
+              <textarea
+                name="issueDescription"
+                value={formData.issueDescription}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+          </>
+        );
+
+      case "Products":
+        return (
+          <>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Product Name</label>
+              <input
+                type="text"
+                name="productName"
+                value={formData.productName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+          </>
+        );
+
+      case "Training and Workshop":
+      case "Setup and Costing":
+        return (
+          <>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Your Query</label>
+              <textarea
+                name="query"
+                value={formData.query}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+          </>
+        );
+
+      default:
+        return null;
     }
   };
 
   return (
     <>
       <Header />
-      <div className="flex justify-center items-center min-h-screen bg-blue-200 py-4">
-        <div className="w-full max-w-4xl p-6 bg-white rounded-lg shadow-lg">
-          <h1 className="text-3xl font-semibold text-center mb-6">Frequently Asked Questions</h1>
-          {questions.map((q) => (
-            <div key={q.id} className="mb-4 border-b pb-4">
-              <h3 className="text-xl font-medium text-blue-600 mb-2">
-                {q.question}
-              </h3>
-              <p className="text-gray-700">{q.answer}</p>
-            </div>
-          ))}
-          {/* Buttons at the bottom */}
-          <div className="mt-6 flex justify-center space-x-4">
-            <button
-              onClick={handleChatClick}
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-            >
-              Chat with us
-            </button>
-            
-          </div>
-          {/* Chat Form */}
-          {chatOpen && (
-            <div className="mt-6 border-t pt-4">
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="text-lg font-semibold">Chat Box</h4>
-                <button
-                  onClick={handleCloseChat}
-                  className="text-red-500 font-semibold hover:underline"
-                >
-                  Close Chat
-                </button>
-              </div>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label className="block text-gray-700 mb-2">Name</label>
-                  <input
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 mb-2">Select Issue related Domain</label>
-                  <select
-                    defaultValue="Choose Option"
-                    id="opt"
-                    className="h-8 w-40 border-2 border-blue-400"
-                    onChange={(e) => setDomain(e.target.value)}
-                  >
-                    <option value="Choose Option" disabled>
-                      Choose Option
-                    </option>
-                    <option value="Mechanical">Mechanical</option>
-                    <option value="Robotics">Robotics</option>
-                    <option value="Software">Software</option>
-                    <option value="Electronics">Electronics/Electrical</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea
-                    rows="4"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full p-4 border border-gray-300 rounded-lg"
-                    placeholder="Ask your question..."
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300"
-                >
-                  Send
-                </button>
-              </form>
-            </div>
+      <div className="container mx-auto py-6 px-4">
+        <h1 className="text-3xl font-bold text-center mb-8">Customer Support</h1>
+        <div className="flex justify-center gap-4 mb-8">
+          {["Services", "Products", "Training and Workshop", "Setup and Costing"].map(
+            (category) => (
+              <button
+                key={category}
+                onClick={() => handleFormSwitch(category)}
+                className={`px-4 py-2 rounded-lg shadow-md transition ${
+                  visibleForm === category
+                    ? "bg-purple-700 text-white"
+                    : "bg-purple-100 text-purple-700 hover:bg-purple-200"
+                }`}
+              >
+                {category}
+              </button>
+            )
           )}
         </div>
+        {visibleForm && (
+          <form
+            onSubmit={(e) => handleSubmit(e, visibleForm)}
+            className="max-w-lg mx-auto p-6 border rounded-lg shadow-lg bg-white"
+          >
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Full Name</label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Contact No.</label>
+              <input
+                type="tel"
+                name="contactNo"
+                value={formData.contactNo}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Organization Name</label>
+              <input
+                type="text"
+                name="organizationName"
+                value={formData.organizationName}
+                onChange={handleChange}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                required
+              />
+            </div>
+            {renderForm(visibleForm)}
+            <div className="mb-4">
+              <label className="block mb-1 text-gray-600">Upload Image</label>
+              <input
+                type="file"
+                onChange={handleFileChange}
+                accept="image/*"
+                className="block w-full text-gray-600"
+              />
+            </div>
+            <div className="flex justify-between">
+              <button
+                type="submit"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              >
+                Submit
+              </button>
+              <button
+                type="button"
+                onClick={() => setVisibleForm(null)}
+                className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        )}
       </div>
       <Footer />
     </>
   );
 };
 
-export default QuestionAnswer;
+export default MultiFormPage;
