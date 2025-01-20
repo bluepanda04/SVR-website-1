@@ -26,20 +26,6 @@ const MultiFormPage = () => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
 
-  const resetFormData = () => {
-    setFormData({
-      fullName: "",
-      email: "",
-      contactNo: "",
-      organizationName: "",
-      productName: "",
-      serviceName: "",
-      issueDescription: "",
-      query: "",
-      image: null,
-    });
-  };
-
   const handleSubmit = async (e, formType) => {
     e.preventDefault();
 
@@ -71,7 +57,7 @@ const MultiFormPage = () => {
 
       if (response.ok) {
         alert(`${formType} form submitted successfully!`);
-        resetFormData();
+        resetForm();
         setVisibleForm(null);
       } else {
         alert("Failed to submit the form. Please try again.");
@@ -82,9 +68,23 @@ const MultiFormPage = () => {
     }
   };
 
+  const resetForm = () => {
+    setFormData({
+      fullName: "",
+      email: "",
+      contactNo: "",
+      organizationName: "",
+      productName: "",
+      serviceName: "",
+      issueDescription: "",
+      query: "",
+      image: null,
+    });
+  };
+
   const handleFormSwitch = (formType) => {
-    resetFormData(); // Reset form values
-    setVisibleForm(formType); // Set the new form as visible
+    resetForm();
+    setVisibleForm(formType);
   };
 
   const renderForm = (formType) => {
@@ -99,7 +99,7 @@ const MultiFormPage = () => {
                 name="serviceName"
                 value={formData.serviceName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -109,7 +109,7 @@ const MultiFormPage = () => {
                 name="issueDescription"
                 value={formData.issueDescription}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -126,7 +126,7 @@ const MultiFormPage = () => {
                 name="productName"
                 value={formData.productName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -143,7 +143,7 @@ const MultiFormPage = () => {
                 name="query"
                 value={formData.query}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -166,11 +166,11 @@ const MultiFormPage = () => {
               <button
                 key={category}
                 onClick={() => handleFormSwitch(category)}
-                className={`px-4 py-2 rounded-lg shadow-md transition ${
+                className={`px-4 py-2 ${
                   visibleForm === category
-                    ? "bg-purple-700 text-white"
-                    : "bg-purple-100 text-purple-700 hover:bg-purple-200"
-                }`}
+                    ? "bg-blue-800 text-white"
+                    : "bg-[#2a2974] text-white"
+                } rounded-lg shadow-md hover:bg-blue-900 transition`}
               >
                 {category}
               </button>
@@ -189,7 +189,7 @@ const MultiFormPage = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -200,7 +200,7 @@ const MultiFormPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -211,7 +211,7 @@ const MultiFormPage = () => {
                 name="contactNo"
                 value={formData.contactNo}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -222,7 +222,7 @@ const MultiFormPage = () => {
                 name="organizationName"
                 value={formData.organizationName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-purple-500"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -253,6 +253,32 @@ const MultiFormPage = () => {
             </div>
           </form>
         )}
+      </div>
+      <div className="container mx-auto py-6 px-4 border-t mt-8">
+        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <ul className="space-y-4">
+          <li>
+            <strong>What services does your company provide?</strong>
+            <p>We specialize in both educational and application-based robotics solutions and can customize them to suit your needs.</p>
+          </li>
+          <li>
+            <strong>Where are your offices located?</strong>
+            <p>Our headquarters are in Pune, Maharashtra, India, with global support available online.</p>
+          </li>
+          <li>
+            <strong>How do I raise a support ticket?</strong>
+            <p>You can use the support page on our website to submit your request or email your query to support@svrinfotech.net.</p>
+          </li>
+          <li>
+            <strong>What is the typical response time for customer support?</strong>
+            <p>Our support team aims to respond to queries within 24-48 hours.</p>
+          </li>
+
+          <li>
+            <strong>Do you offer product training?</strong>
+            <p>Yes, we provide personalized training and workshops for all our services.</p>
+          </li>
+        </ul>
       </div>
       <Footer />
     </>
