@@ -99,7 +99,7 @@ const MultiFormPage = () => {
                 name="serviceName"
                 value={formData.serviceName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -109,7 +109,7 @@ const MultiFormPage = () => {
                 name="issueDescription"
                 value={formData.issueDescription}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -126,7 +126,7 @@ const MultiFormPage = () => {
                 name="productName"
                 value={formData.productName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -143,7 +143,7 @@ const MultiFormPage = () => {
                 name="query"
                 value={formData.query}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -180,7 +180,7 @@ const MultiFormPage = () => {
         {visibleForm && (
           <form
             onSubmit={(e) => handleSubmit(e, visibleForm)}
-            className="max-w-lg mx-auto p-6 border rounded-lg shadow-lg bg-white"
+            className="max-w-lg mx-auto p-6 border rounded-lg shadow-lg bg-white bg-opacity-80"
           >
             <div className="mb-4">
               <label className="block mb-1 text-gray-600">Full Name</label>
@@ -189,7 +189,7 @@ const MultiFormPage = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -200,7 +200,7 @@ const MultiFormPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -211,7 +211,7 @@ const MultiFormPage = () => {
                 name="contactNo"
                 value={formData.contactNo}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -222,7 +222,7 @@ const MultiFormPage = () => {
                 name="organizationName"
                 value={formData.organizationName}
                 onChange={handleChange}
-                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -233,7 +233,7 @@ const MultiFormPage = () => {
                 type="file"
                 onChange={handleFileChange}
                 accept="image/*"
-                className="block w-full text-gray-600"
+                className="block w-full text-gray-600 bg-gray-100 p-2 border rounded-md"
               />
             </div>
             <div className="flex justify-between">
@@ -253,31 +253,6 @@ const MultiFormPage = () => {
             </div>
           </form>
         )}
-      </div>
-      <div className="container mx-auto py-6 px-4 border-t mt-8">
-        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-        <ul className="space-y-4">
-          <li>
-            <strong>What services does your company provide?</strong>
-            <p>We specialize in both educational and application-based robotics solutions and can customize them to suit your needs.</p>
-          </li>
-          <li>
-            <strong>Where are your offices located?</strong>
-            <p>Our headquarters are in Pune, Maharashtra, India, with global support available online.</p>
-          </li>
-          <li>
-            <strong>How do I raise a support ticket?</strong>
-            <p>You can use the support page on our website to submit your request or email your query to support@svrinfotech.net.</p>
-          </li>
-          <li>
-            <strong>What is the typical response time for customer support?</strong>
-            <p>Our support team aims to respond to queries within 24-48 hours.</p>
-          </li>
-          <li>
-            <strong>Do you provide training in robotics and automation?</strong>
-            <p>We offer training services for students and professionals in robotics, automation, and related technologies.</p>
-          </li>
-        </ul>
       </div>
       <Footer />
     </>
