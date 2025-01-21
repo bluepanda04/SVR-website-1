@@ -169,7 +169,7 @@ const MultiFormPage = () => {
                 className={`px-4 py-2 ${
                   visibleForm === category
                     ? "bg-blue-800 text-white"
-                    : "bg-[#2a2974] text-white"
+                    : "bg-[#010050] text-white"
                 } rounded-lg shadow-md hover:bg-blue-900 transition`}
               >
                 {category}
@@ -239,7 +239,7 @@ const MultiFormPage = () => {
             <div className="flex justify-between">
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                className="px-4 py-2 bg-[#010050] text-white rounded-lg hover:bg-blue-700"
               >
                 Submit
               </button>
