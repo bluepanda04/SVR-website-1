@@ -23,7 +23,7 @@ const ProductInformation = {
     image: ["../src/assets/setup_my_lab_1.jpg", "../src/assets/setup_my_lab_2.jpg", "path3"],
     description: "Complete Product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -36,7 +36,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "COMPLETE PRODUCT DESCRIPTION",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -49,7 +49,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/cobotsvr.jpeg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -62,7 +62,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -73,14 +73,14 @@ const ProductInformation = {
   fms: {
     title: "Flexible Manufacturing System",
     image: ["path1", "../src/assets/fms.jpg", "path3"],
-    description: "product description",
+    description: "A flexible manufacturing system (FMS) is a production method that is designed to easily adapt to changes in the type and quantity of the product being manufactured. Machines and computerized systems can be configured to manufacture a variety of parts and handle changing levels of production. A flexible manufacturing system (FMS) can improve efficiency and thus lower a company's production cost. Flexible manufacturing also can be a key component of a make-to-order strategy that allows customers to customize the products they want. Such flexibility can come with higher upfront costs. Purchasing and installing the specialized equipment that allows for such customization may be costly compared with more traditional systems.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
     ],
-    links: ["abc.com", "xyz.com"],
+    links: ["https://www.youtube.com/embed/IE5XVANBxaU?si=3JVUbhrumBPkp94w", "https://www.youtube.com/embed/4YTySpU-iHw?si=hwMA097ybdfsRszz"],
     document: ["path1", "path2"],
   },
   electrohyrdaulic: {
@@ -88,7 +88,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -101,7 +101,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/pneumatic.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -114,7 +114,7 @@ const ProductInformation = {
     image: ["path1", "psrc/assets/bottle filling.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -127,7 +127,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -140,7 +140,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -153,7 +153,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/SensorisedGripper.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -166,7 +166,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/magneticgripper.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -179,7 +179,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/gripperlab img.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -192,7 +192,7 @@ const ProductInformation = {
     image: ["../src/assets/Parallel Grabo 5.png", "../src/assets/SVR Garbo 1.2,5 gripper.jpeg", "../src/assets/parallel_1.2.png"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -205,7 +205,7 @@ const ProductInformation = {
     image: ["../src/assets/curv_1.2.png", "../src/assets/SVR Garbo ( Curvilinear Jaw).jpeg", "../src/assets/Curvilinear Grabo.png"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -218,7 +218,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -231,7 +231,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/VFD KIT.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -244,7 +244,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -257,7 +257,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/Stepper Motor Speed & Direction Control.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -270,7 +270,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/waterlevelcontrolkit.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -283,7 +283,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/Conveyorkitweb.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -296,7 +296,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/stardeltastarter.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -309,7 +309,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/temperaturecontrolkit.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -322,7 +322,7 @@ const ProductInformation = {
     image: ["path1", "psrc/assets/Maze Solving Robot.JPG", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -333,12 +333,15 @@ const ProductInformation = {
   linefollowingrobot: {
     title: "Line Following Robot ",
     image: ["path1", "../src/assets/line follower.JPG", "path3"],
-    description: "product description",
+    description: "Line Follower Robot uses Arduino Nano development board. The robot finds the path in the Line and follow the same. The system uses Infrared sensor to find the path and ultrasound sensor for obstacle detection which is controlled by C programmed microcontroller and the same drives the geared DC motor. The user will get thorough knowledge about functioning and interfacing of an IR sensor, a DC motor & an ultrasound sensor. This project will also help the user in developing programming logic using if-else function. This very simple and easy to build kit is perfect for beginners and is a great learning platform to get into robotics and engineering.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
+      { Lenght: "200mm" },
+      { Width: "220mm" },
+      { Height: "120mm" },
+      { Battery_Life: "4hrs." },
+
     ],
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
@@ -346,9 +349,9 @@ const ProductInformation = {
   selfbalancingrobot: {
     title: "Self-balancing Robot",
     image: ["path1", "../src/assets/self balancing.JPG", "path3"],
-    description: "product description",
+    description: "Two wheeled self-balancing robot, which is based on an inverted pendulum system, is dynamically stable but statically unstable. The robot involves various physics and control theories. This project describes the modeling of the two wheeled self-balancing robot, designs the robot controller using PID and implements the controller on the robot. In this project, an inertial measurement unit (IMU) is used, which combines accelerometer and gyroscope measurement in order to estimate and obtain the tilt angle of the robot. The PID controller is applied to correct the error between the desired set point and the actual tilt angle and adjust the dc motor speed accordingly to balance the robot. The result obtained shows that the PID controller is able to balance the robot acceptably but with some limitations. The simulation result of the model is compared with the developed hardware and the performance of the controller is analyzed and discussed.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -359,9 +362,9 @@ const ProductInformation = {
   digitaldice: {
     title: "Digital Dice Kit",
     image: ["path1", "../src/assets/Digital Dice.jpg", "path3"],
-    description: "product description",
+    description: "We all are familiar with dice and played Ludo or Snake & Ladders game by using dice. Dice is a cube type solid box which contains 6 different numbers on all of its sides. We throw dice on a surface to get a random number while playing the games. In this project we have tried to replicate it with a digital dice using Arduino and seven segment display. In place of throwing the dice, here we need to press a button to get a random number between 0 to 6.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -372,9 +375,9 @@ const ProductInformation = {
   temperaturecontrolledfan: {
     title: "Temperature Controlled Fan Kit",
     image: ["path1", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
-    description: "product description",
+    description: "This application is simple just by using temperature sensor LM35 with an Arduino kit to control a fan with respect to the temperature read by the micro-controller which in this case is the Arduino kit. The temperature sensor LM35 is connected with the Arduino with an analog input pin A0 (the temperature is an analog signal), while the fan is connected with a PWM (Pulse Width Modulation) pin 6 which controls the speed of the fan with respect to the output temperature using a function map in the Arduino IDE.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -382,12 +385,12 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  objectkitconter: {
+  objectcounter: {
     title: "Object Counter Kit",
     image: ["path1", "../src/assets/object counter.png", "path3"],
-    description: "product description",
+    description: "Object counters or product counters are important applications used in industries, shopping malls, etc. They count objects or products automatically and so reduce human efforts.",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -400,7 +403,7 @@ const ProductInformation = {
     image: ["path1", "path2", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -413,7 +416,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/robo soft.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -426,7 +429,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/mach1 soft.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -439,7 +442,7 @@ const ProductInformation = {
     image: ["path1", "../src/assets/feast Img.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -452,7 +455,7 @@ const ProductInformation = {
     image: ["path1", "psrc/assets/Rt tool box image.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
+    /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
       { key2: "value2" },
@@ -460,6 +463,20 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
+  sampledescriptionpage: {
+    title: "Product_Name",
+    image: ["path1", "path2", "path3"],
+    description: "Complete_product_Description",
+    features: ["feature 1", "feature2"],
+    /*blueprintImages: ["path1", "path2"],*/
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
+  },
+
 
 };
 
@@ -505,7 +522,7 @@ const SpecificProduct = () => {
         </div>
 
         {/* Blueprint Images */}
-        <div className="mb-10">
+        {/* <div className="mb-10">
           <h2 className="text-2xl font-semibold text-gray-800 mb-5">Blueprint Images</h2>
           <div className="flex space-x-5 justify-center">
             {product.blueprintImages.map((img, index) => (
@@ -517,7 +534,7 @@ const SpecificProduct = () => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Specifications Table */}
         <div className="mb-10">
