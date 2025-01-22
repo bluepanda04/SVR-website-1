@@ -83,7 +83,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  electrohyrdolic: {
+  electrohyrdaulic: {
     title: "IoT, PLC, Manual Based Electro-Hydraulic System",
     image: ["path1", "path2", "path3"],
     description: "product description",
@@ -109,20 +109,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  elevetorkit: {
-    title: "Elevator Kit",
-    image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
-    description: "product description",
-    features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
-    specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
-    ],
-    links: ["abc.com", "xyz.com"],
-    document: ["path1", "path2"],
-  },
-  bottleplant: {
+  bottlefillingplant: {
     title: "Bottle Filling Plant ",
     image: ["path1", "psrc/assets/bottle filling.png", "path3"],
     description: "product description",
@@ -174,7 +161,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  maggripper: {
+  magneticgripper: {
     title: "Magnetic Gripper",
     image: ["path1", "../src/assets/magneticgripper.jpg", "path3"],
     description: "product description",
@@ -226,7 +213,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  pneumatic: {
+  pneumaticgripper: {
     title: "Pneumatic 2 & 3 Jaw Gripper",
     image: ["path1", "path2", "path3"],
     description: "product description",
@@ -252,7 +239,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  elevatorsim: {
+  elevatorsimulationkit: {
     title: "Elevator Simulation Kit",
     image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
     description: "product description",
@@ -265,7 +252,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  steppermotor: {
+  steppermotorcontrolkit: {
     title: "Stepper Motor Speed and Direction Control Kit",
     image: ["path1", "../src/assets/Stepper Motor Speed & Direction Control.jpg", "path3"],
     description: "product description",
@@ -278,7 +265,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  waterlvlcontrol: {
+  waterlevelcontrolkit: {
     title: "Water Level Control Kit",
     image: ["path1", "../src/assets/waterlevelcontrolkit.png", "path3"],
     description: "product description",
@@ -291,7 +278,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  conveyor: {
+  conveyorkit: {
     title: "Conveyor Kit",
     image: ["path1", "../src/assets/Conveyorkitweb.png", "path3"],
     description: "product description",
@@ -304,7 +291,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  stardelta: {
+  stardeltakit: {
     title: "Star Delta Kit",
     image: ["path1", "../src/assets/stardeltastarter.png", "path3"],
     description: "product description",
@@ -317,7 +304,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  tempcontrol: {
+  temperaturecontrol: {
     title: "Temperature Control Kit",
     image: ["path1", "../src/assets/temperaturecontrolkit.png", "path3"],
     description: "product description",
@@ -330,7 +317,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  mazerobot: {
+  mazesolvingrobot: {
     title: "Maze Solving Robot",
     image: ["path1", "psrc/assets/Maze Solving Robot.JPG", "path3"],
     description: "product description",
@@ -343,7 +330,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  linerobot: {
+  linefollowingrobot: {
     title: "Line Following Robot ",
     image: ["path1", "../src/assets/line follower.JPG", "path3"],
     description: "product description",
@@ -356,7 +343,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  balancerobot: {
+  selfbalancingrobot: {
     title: "Self-balancing Robot",
     image: ["path1", "../src/assets/self balancing.JPG", "path3"],
     description: "product description",
@@ -369,7 +356,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  digitadice: {
+  digitaldice: {
     title: "Digital Dice Kit",
     image: ["path1", "../src/assets/Digital Dice.jpg", "path3"],
     description: "product description",
@@ -382,7 +369,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  fankit: {
+  temperaturecontrolledfan: {
     title: "Temperature Controlled Fan Kit",
     image: ["path1", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
     description: "product description",
@@ -395,7 +382,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  objconter: {
+  objectkitconter: {
     title: "Object Counter Kit",
     image: ["path1", "../src/assets/object counter.png", "path3"],
     description: "product description",
@@ -507,7 +494,7 @@ const SpecificProduct = () => {
 
         {/* Features */}
         <div className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-5">Features</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-5">Key Features</h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2">
             {product.features.map((feature, index) => (
               <li key={index} className="text-lg">
@@ -534,12 +521,12 @@ const SpecificProduct = () => {
 
         {/* Specifications Table */}
         <div className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-5">Specifications</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-5">Product Specifications</h2>
           <table className="table-auto w-full border-collapse border border-gray-300 bg-white">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border border-gray-300 px-6 py-3 text-left">Key</th>
-                <th className="border border-gray-300 px-6 py-3 text-left">Value</th>
+                <th className="border border-gray-300 px-6 py-3 text-left">Characteristics</th>
+                <th className="border border-gray-300 px-6 py-3 text-left">Description</th>
               </tr>
             </thead>
             <tbody>
