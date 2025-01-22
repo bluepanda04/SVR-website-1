@@ -5,33 +5,7 @@ import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 
 const ProductInformation = {
-  Scara: {
-    title: "Scara Robot",
-    image: ['../src/assets/AI robot.jpg', image, image],
-    description: "akklagkd dfkjld  hdk;",
-    features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
-    specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
-    ],
-    links: ["abc.com", "xyz.com"],
-    document: ["path1", "path2"],
-  },
-  Scara2: {
-    title: "Scara Robot",
-    image: ["path1", "path2", "path3"],
-    description: "akklagkd dfkjld  hdk;",
-    features: ["feature 1", "feature2"],
-    blueprintImages: ["path1", "path2"],
-    specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
-    ],
-    links: ["abc.com", "xyz.com"],
-    document: ["path1", "path2"],
-  },
-  Scara3: {
+  scara: {
     title: "Scara Robot",
     image: ['../src/assets/AI robot.jpg', image, image],
     description: "akklagkd dfkjld  hdk;",
@@ -44,9 +18,9 @@ const ProductInformation = {
     links: ["https://www.youtube.com/embed/u6KsQ8_4qq8?si=nqjsc9-ooQyu4dPE", "https://www.youtube.com/embed/u6KsQ8_4qq8?si=nqjsc9-ooQyu4dPE"],
     document: ["path1", "path2"],
   },
-  RoboticsLab: {
+  roboticslab: {
     title: "Robotics Lab Setup",
-    image: ["path1", "path2", "path3"],
+    image: ["../src/assets/setup_my_lab_1.jpg", "../src/assets/setup_my_lab_2.jpg", "path3"],
     description: "Complete Product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -72,7 +46,7 @@ const ProductInformation = {
   },
   cobot: {
     title: "Cobot",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/cobotsvr.jpeg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -98,7 +72,7 @@ const ProductInformation = {
   },
   fms: {
     title: "Flexible Manufacturing System",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/fms.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -124,7 +98,7 @@ const ProductInformation = {
   },
   electropneumatic: {
     title: "IoT, PLC, Manual Based Electro-Pneumatic System",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/pneumatic.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -137,7 +111,7 @@ const ProductInformation = {
   },
   elevetorkit: {
     title: "Elevator Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -150,7 +124,7 @@ const ProductInformation = {
   },
   bottleplant: {
     title: "Bottle Filling Plant ",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "psrc/assets/bottle filling.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -189,7 +163,7 @@ const ProductInformation = {
   },
   sensorizedgripper: {
     title: "Sensorized Gripper",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/SensorisedGripper.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -202,7 +176,7 @@ const ProductInformation = {
   },
   maggripper: {
     title: "Magnetic Gripper",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/magneticgripper.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -215,7 +189,7 @@ const ProductInformation = {
   },
   gripperlab: {
     title: "Gripper Lab",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/gripperlab img.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -226,9 +200,9 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  garboparallel: {
-    title: "Svr Garbo 1.2 & 5 (Parallel Jaw) ",
-    image: ["path1", "path2", "path3"],
+  graboparallel: {
+    title: "Svr Grabo 1.2 & 5 (Parallel Jaw) ",
+    image: ["../src/assets/Parallel Grabo 5.png", "../src/assets/SVR Garbo 1.2,5 gripper.jpeg", "../src/assets/parallel_1.2.png"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -239,9 +213,9 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  garbocurvilinear: {
-    title: "Svr Garbo 1.2 & 5 (Curvilinear Jaw)",
-    image: ["path1", "path2", "path3"],
+  grabocurvilinear: {
+    title: "Svr Grabo 1.2 & 5 (Curvilinear Jaw)",
+    image: ["../src/assets/curv_1.2.png", "../src/assets/SVR Garbo ( Curvilinear Jaw).jpeg", "../src/assets/Curvilinear Grabo.png"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -267,7 +241,7 @@ const ProductInformation = {
   },
   vfd: {
     title: "VFD Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/VFD KIT.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -280,7 +254,7 @@ const ProductInformation = {
   },
   elevatorsim: {
     title: "Elevator Simulation Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Elevator simulation.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -293,7 +267,7 @@ const ProductInformation = {
   },
   steppermotor: {
     title: "Stepper Motor Speed and Direction Control Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Stepper Motor Speed & Direction Control.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -306,7 +280,7 @@ const ProductInformation = {
   },
   waterlvlcontrol: {
     title: "Water Level Control Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/waterlevelcontrolkit.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -319,7 +293,7 @@ const ProductInformation = {
   },
   conveyor: {
     title: "Conveyor Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Conveyorkitweb.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -332,7 +306,7 @@ const ProductInformation = {
   },
   stardelta: {
     title: "Star Delta Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/stardeltastarter.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -345,7 +319,7 @@ const ProductInformation = {
   },
   tempcontrol: {
     title: "Temperature Control Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/temperaturecontrolkit.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -358,7 +332,7 @@ const ProductInformation = {
   },
   mazerobot: {
     title: "Maze Solving Robot",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "psrc/assets/Maze Solving Robot.JPG", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -371,7 +345,7 @@ const ProductInformation = {
   },
   linerobot: {
     title: "Line Following Robot ",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/line follower.JPG", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -384,7 +358,7 @@ const ProductInformation = {
   },
   balancerobot: {
     title: "Self-balancing Robot",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/self balancing.JPG", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -397,7 +371,7 @@ const ProductInformation = {
   },
   digitadice: {
     title: "Digital Dice Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Digital Dice.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -410,7 +384,7 @@ const ProductInformation = {
   },
   fankit: {
     title: "Temperature Controlled Fan Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -423,7 +397,7 @@ const ProductInformation = {
   },
   objconter: {
     title: "Object Counter Kit",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/object counter.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -449,7 +423,7 @@ const ProductInformation = {
   },
   roboanalyzer: {
     title: "RoboAnalyzer",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/robo soft.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -462,7 +436,7 @@ const ProductInformation = {
   },
   mechanalyzer: {
     title: "MechAnalyzer",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/mach1 soft.jpg", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -475,7 +449,7 @@ const ProductInformation = {
   },
   feast: {
     title: "FEAST",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "../src/assets/feast Img.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
@@ -488,7 +462,7 @@ const ProductInformation = {
   },
   rttoolbox: {
     title: "RT Tool box Software",
-    image: ["path1", "path2", "path3"],
+    image: ["path1", "psrc/assets/Rt tool box image.png", "path3"],
     description: "product description",
     features: ["feature 1", "feature2"],
     blueprintImages: ["path1", "path2"],
