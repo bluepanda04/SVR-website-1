@@ -254,6 +254,31 @@ const MultiFormPage = () => {
           </form>
         )}
       </div>
+      <div className="container mx-auto py-6 px-4 border-t mt-8">
+        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <ul className="space-y-4">
+          <li>
+            <strong>What services does your company provide?</strong>
+            <p>We specialize in both educational and application-based robotics solutions and can customize them to suit your needs.</p>
+          </li>
+          <li>
+            <strong>Where are your offices located?</strong>
+            <p>Our headquarters are in Pune, Maharashtra, India, with global support available online.</p>
+          </li>
+          <li>
+            <strong>How do I raise a support ticket?</strong>
+            <p>You can use the support page on our website to submit your request or email your query to support@svrinfotech.net.</p>
+          </li>
+          <li>
+            <strong>What is the typical response time for customer support?</strong>
+            <p>Our support team aims to respond to queries within 24-48 hours.</p>
+          </li>
+          <li>
+            <strong>Do you provide training in robotics and automation?</strong>
+            <p>We offer training services for students and professionals in robotics, automation, and related technologies.</p>
+          </li>
+        </ul>
+      </div>
       <Footer />
     </>
   );
