@@ -160,6 +160,7 @@ const MultiFormPage = () => {
       <Header />
       <div className="container mx-auto py-6 px-4">
         <h1 className="text-3xl font-bold text-center mb-8">Customer Support</h1>
+        <h1 className="text-1xl font-semibold text-center mb-8">Fill out the below form to submit your query. </h1>
         <div className="flex justify-center gap-4 mb-8">
           {["Services", "Products", "Training and Workshop", "Setup and Costing"].map(
             (category) => (
