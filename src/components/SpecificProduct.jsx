@@ -460,7 +460,7 @@ const ProductInformation = {
   feast: {
     title: "FEAST",
     image: ["path1", "../src/assets/feast Img.png", "path3"],
-    description: "product description",
+    description: "FEAST (Finite Element Analysis of STructures) is a structural analysis software based on Finite Element Method. FEAST is ISRO’s structural analysis software based on finite element method realized by Structural Engineering Entity of Vikram Sarabhai Space Centre (VSSC)/Indian Space Research Organisation (ISRO).The software was primarily developed for solving ISRO’s launch vehicle and satellite structural engineering problems.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
