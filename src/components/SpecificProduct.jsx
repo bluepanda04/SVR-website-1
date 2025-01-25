@@ -536,6 +536,19 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
+  articulatedrobot: {
+    title: "Articulated Robot",
+    image: ["path1", "path2", "path3"],
+    description: "Complete_product_Description",
+    features: ["feature 1", "feature2"],
+    /*blueprintImages: ["path1", "path2"],*/
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
+  },
   sampledescriptionpage: {
     title: "Product_Name",
     image: ["path1", "path2", "path3"],
