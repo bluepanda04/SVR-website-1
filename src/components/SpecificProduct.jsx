@@ -651,7 +651,7 @@ const SpecificProduct = () => {
         <div className="mb-10">
 
 
-          {product.links && product.links.map((link, index) => {
+          {product.links && product.links.map((link, index) =>{
             if (index == 0) {
               return (
                 <>
@@ -663,34 +663,9 @@ const SpecificProduct = () => {
 
             return (
 
-              //   <li key={index}>
-              //     <a
-              //       href={`https://${link}`}
-              //       target="_blank"
-              //       rel="noopener noreferrer"
-              //       className="text-blue-500 hover:underline"
-              //     >
-              //       {link}
-              //     </a>
-              //   </li>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-5">Links</h2>
-          
-            {product.links && product.links.map((link, index) => (
-            //   <li key={index}>
-            //     <a
-            //       href={`https://${link}`}
-            //       target="_blank"
-            //       rel="noopener noreferrer"
-            //       className="text-blue-500 hover:underline"
-            //     >
-            //       {link}
-            //     </a>
-            //   </li>
-
-
               <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className="inline m-4"></iframe>
-            )
-          })}
+            
+          )})}
 
 
         </div>
