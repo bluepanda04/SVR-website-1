@@ -361,46 +361,64 @@ const ProductInformation = {
       { Width: "220mm" },
       { Height: "120mm" },
       { Battery_Life: "4hrs." },
-
-    ],
-    links: ["abc.com", "xyz.com"],
-    document: ["path1", "path2"],
+      {Controller: ""},
+      {"Motor Driver":""},
+      {Chassis:""},
+      {"Cable and Connectors":""},
+      ],
+      links: ["abc.com", "xyz.com"],
+      document: ["path1", "path2"],
   },
   selfbalancingrobot: {
     title: "Self-balancing Robot",
-    image: ["path1", "../src/assets/self balancing.JPG", "path3"],
+    image: ["../src/assets/selfbalancebot.png", "../src/assets/self balancing.JPG", "path3"],
     description: "Two wheeled self-balancing robot, which is based on an inverted pendulum system, is dynamically stable but statically unstable. The robot involves various physics and control theories. This project describes the modeling of the two wheeled self-balancing robot, designs the robot controller using PID and implements the controller on the robot. In this project, an inertial measurement unit (IMU) is used, which combines accelerometer and gyroscope measurement in order to estimate and obtain the tilt angle of the robot. The PID controller is applied to correct the error between the desired set point and the actual tilt angle and adjust the dc motor speed accordingly to balance the robot. The result obtained shows that the PID controller is able to balance the robot acceptably but with some limitations. The simulation result of the model is compared with the developed hardware and the performance of the controller is analyzed and discussed.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
+      { Length: "160mm" },
+      { Widht: "64mm" },
+      { Height: "147mm" },
+      { "Battery Life": "4hrs. (In continuously running condition for 11.2 V and 2200 mAh battery)" },
     ],
-    links: ["abc.com", "xyz.com"],
+    links: [],
     document: ["path1", "path2"],
   },
   digitaldice: {
     title: "Digital Dice Kit",
-    image: ["path1", "../src/assets/Digital Dice.jpg", "path3"],
+    image: ["../src/assets/digitaldice.png", "../src/assets/Digital Dice.jpg", "path3"],
     description: "We all are familiar with dice and played Ludo or Snake & Ladders game by using dice. Dice is a cube type solid box which contains 6 different numbers on all of its sides. We throw dice on a surface to get a random number while playing the games. In this project we have tried to replicate it with a digital dice using Arduino and seven segment display. In place of throwing the dice, here we need to press a button to get a random number between 0 to 6.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
+      { Microcontroller: "Arduino UNO" },
+      { Button: "Push Button" },
+      {"Connecting Wires": ""},
+      {Breadboard:""},
+      {Resistor: "1k ohm"},
+      {"Power Supply":"5V"},
+      {"Seven Segment Display":""},
     ],
-    links: ["abc.com", "xyz.com"],
+    //links: ["abc.com", "xyz.com"],
+
     document: ["path1", "path2"],
   },
   temperaturecontrolledfan: {
     title: "Temperature Controlled Fan Kit",
-    image: ["path1", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
+    image: ["../src/assets/temperaturefankit.png", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
     description: "This application is simple just by using temperature sensor LM35 with an Arduino kit to control a fan with respect to the temperature read by the micro-controller which in this case is the Arduino kit. The temperature sensor LM35 is connected with the Arduino with an analog input pin A0 (the temperature is an analog signal), while the fan is connected with a PWM (Pulse Width Modulation) pin 6 which controls the speed of the fan with respect to the output temperature using a function map in the Arduino IDE.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
-      { key1: "value1" },
-      { key2: "value2" },
+      { Microcontroller:"Arduino UNO" },
+      { "Temperature Sensor": "LM35" },
+      {"Connecting Wires":"Jumper Cables"},
+      {Resistor:"1k ohm"},
+      {Diode:"1N4007"},
+      {Motor:"DC motor or a DC Fan"},
+      {Transistor:"NPN transistor BC547"},
+      {Voltage: "12V"},
+
     ],
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
@@ -409,7 +427,13 @@ const ProductInformation = {
     title: "Object Counter Kit",
     image: ["path1", "../src/assets/object counter.png", "path3"],
     description: "Object counters or product counters are important applications used in industries, shopping malls, etc. They count objects or products automatically and so reduce human efforts.",
-    features: ["feature 1", "feature2"],
+    features: ["High Quality Stainless Steel Chassis",
+              "High Precision & reliable electronic devices",
+              "Unbreakable Acrylic Body",
+              "Good Quality High Torque Motors",
+              "Timing Belys for precise operation",
+              "Plastic Timimg pulleys with aluminium inserts",
+              "Adjustable Distance for object travelling"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
@@ -434,8 +458,24 @@ const ProductInformation = {
   roboanalyzer: {
     title: "RoboAnalyzer",
     image: ["path1", "../src/assets/robo soft.jpg", "path3"],
-    description: "product description",
-    features: ["feature 1", "feature2"],
+    description: ["Robotics is a subject that deals with the design, analysis, fabrication, and usage of robots for various automated and semi-automated tasks. ",
+        "The concepts taught in a typical robotics course are generally difficult to perceive just by looking at textbook figures. Hence, a need for simulation software for teaching and learning robotics is of prime importance.",
+        " RoboAnalyzer® is a 3D model-based software that can be used to teach and learn robotics concepts. It is an evolving product developed in Mechatronics Lab, Department of Mechanical Engineering at IIT Delhi, New Delhi, India.",
+        
+      ],
+        features: ["Serial manipulator with prismatic and revolute joints",
+      "DH parameters as input",
+      "3D model generated based on DH parameters",
+      "Visualize DH parameters",
+      "Forward Kinematics",
+      "Inverse Kinematics",
+      "Inverse Dynamics (Based on ReDySim Algorithm)",
+      "Forward Dynamics (Based on ReDySim Algorithm)",
+      "Animation with trace of end-effector",
+      "Plot graphs",
+      "Virtual Robot Module (17+ CAD Models of Industrial Robots)",
+      "Save and Open Robot Models",
+      ],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
@@ -448,7 +488,7 @@ const ProductInformation = {
     title: "MechAnalyzer",
     image: ["path1", "../src/assets/mach1 soft.jpg", "path3"],
     description: "product description",
-    features: ["feature 1", "feature2"],
+    features: [],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
       { key1: "value1" },
@@ -474,6 +514,19 @@ const ProductInformation = {
     title: "RT Tool box Software",
     image: ["path1", "psrc/assets/Rt tool box image.png", "path3"],
     description: "product description",
+    features: ["feature 1", "feature2"],
+    /*blueprintImages: ["path1", "path2"],*/
+    specifications: [
+      { key1: "value1" },
+      { key2: "value2" },
+    ],
+    links: ["abc.com", "xyz.com"],
+    document: ["path1", "path2"],
+  },
+  efdm: {
+    title: "ELECTROFAB DESKTOP MACHINE (EFDM)",
+    image: ["path1", "path2", "path3"],
+    description: "Controller and Software - The EFDM is driven by a GRBL-based controller, allowing for versatile and precise control over the machine.\n EFDM supports GRBL version 1.1, offering features such as real-time machine status, overrides, jogging, probing, and homing.\n It is compatible with popular G-code sending software like GRBL Panel, Candle, and Universal G-Code Sender.",
     features: ["feature 1", "feature2"],
     /*blueprintImages: ["path1", "path2"],*/
     specifications: [
@@ -567,7 +620,7 @@ const SpecificProduct = () => {
               </tr>
             </thead>
             <tbody>
-              {product.specifications.map((spec, index) => (
+              {product.specifications && product.specifications.map((spec, index) => (
                 <tr key={index} className="hover:bg-gray-50">
                   {Object.entries(spec).map(([key, value]) => (
                     <>
@@ -585,7 +638,7 @@ const SpecificProduct = () => {
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-gray-800 mb-5">Links</h2>
           
-            {product.links.map((link, index) => (
+            {product.links && product.links.map((link, index) => (
             //   <li key={index}>
             //     <a
             //       href={`https://${link}`}
@@ -608,7 +661,7 @@ const SpecificProduct = () => {
         <div className="mb-10">
           <h2 className="text-2xl font-semibold text-gray-800 mb-5">Documents</h2>
           <ul className="list-disc list-inside text-gray-600 space-y-2">
-            {product.document.map((doc, index) => (
+            {product.document && product.document.map((doc, index) => (
               <li key={index} className="text-lg">
                 {doc}
               </li>
