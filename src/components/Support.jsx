@@ -3,7 +3,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import config from "../config.js";
 
-const MultiFormPage = () => {
+const Support = () => {
   const [visibleForm, setVisibleForm] = useState(null);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -167,11 +167,10 @@ const MultiFormPage = () => {
               <button
                 key={category}
                 onClick={() => handleFormSwitch(category)}
-                className={`px-4 py-2 ${
-                  visibleForm === category
+                className={`px-4 py-2 ${visibleForm === category
                     ? "bg-blue-800 text-white"
                     : "bg-[#010050] text-white"
-                } rounded-lg shadow-md hover:bg-blue-900 transition`}
+                  } rounded-lg shadow-md hover:bg-blue-900 transition`}
               >
                 {category}
               </button>
@@ -179,81 +178,90 @@ const MultiFormPage = () => {
           )}
         </div>
         {visibleForm && (
-          <form
-            onSubmit={(e) => handleSubmit(e, visibleForm)}
-            className="max-w-lg mx-auto p-6 border rounded-lg shadow-lg bg-white bg-opacity-80"
-          >
-            <div className="mb-4">
-              <label className="block mb-1 text-gray-600">Full Name</label>
-              <input
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-1 text-gray-600">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-1 text-gray-600">Contact No.</label>
-              <input
-                type="tel"
-                name="contactNo"
-                value={formData.contactNo}
-                onChange={handleChange}
-                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-1 text-gray-600">Organization Name</label>
-              <input
-                type="text"
-                name="organizationName"
-                value={formData.organizationName}
-                onChange={handleChange}
-                className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-            {renderForm(visibleForm)}
-            <div className="mb-4">
-              <label className="block mb-1 text-gray-600">Upload Image</label>
-              <input
-                type="file"
-                onChange={handleFileChange}
-                accept="image/*"
-                className="block w-full text-gray-600 bg-gray-100 p-2 border rounded-md"
-              />
-            </div>
-            <div className="flex justify-between">
-              <button
-                type="submit"
-                className="px-4 py-2 bg-[#010050] text-white rounded-lg hover:bg-blue-700"
-              >
-                Submit
-              </button>
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="relative max-h-[90vh] w-[90%] max-w-lg overflow-y-auto p-6 border rounded-lg shadow-lg bg-white">
               <button
                 type="button"
                 onClick={() => setVisibleForm(null)}
-                className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
               >
-                Cancel
+                ✕
               </button>
+              <form onSubmit={(e) => handleSubmit(e, visibleForm)}>
+                <div className="mb-4">
+                  <label className="block mb-1 text-gray-600">Full Name</label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-1 text-gray-600">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-1 text-gray-600">Contact No.</label>
+                  <input
+                    type="tel"
+                    name="contactNo"
+                    value={formData.contactNo}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block mb-1 text-gray-600">Organization Name</label>
+                  <input
+                    type="text"
+                    name="organizationName"
+                    value={formData.organizationName}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
+                {renderForm(visibleForm)}
+                <div className="mb-4">
+                  <label className="block mb-1 text-gray-600">Upload Image</label>
+                  <input
+                    type="file"
+                    onChange={handleFileChange}
+                    accept="image/*"
+                    className="block w-full text-gray-600 bg-gray-100 p-2 border rounded-md"
+                  />
+                </div>
+                <div className="flex justify-between">
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-[#010050] text-white rounded-lg hover:bg-blue-700"
+                  >
+                    Submit
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setVisibleForm(null)}
+                    className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         )}
+
       </div>
       <div className="container mx-auto py-6 px-4 border-t mt-8">
         <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -285,4 +293,4 @@ const MultiFormPage = () => {
   );
 };
 
-export default MultiFormPage;
+export default Support;

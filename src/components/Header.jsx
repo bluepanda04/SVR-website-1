@@ -97,7 +97,7 @@ const Header = () => {
             onMouseEnter={(e) => (e.target.style.color = "#f6821f")}
             onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
           >
-            Need Help?
+            Support
           </Link>
         </nav>
 

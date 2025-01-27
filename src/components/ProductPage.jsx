@@ -9,70 +9,83 @@ const ProductPage = () => {
     {
       title: "Robot",
       link: "robot",
-      items: ["Articulated Robot", "Cobot", "Scara Robot", "Cartesian Robot"],
+      items: [
+        ["Articulated Robot", "articulatedrobot"],
+        ["Cobot", "cobot"],
+        ["Scara Robot", "scararobot"],
+        ["Cartesian Robot", "cartesianrobot"],
+      ],
     },
     {
       title: "FMS",
       link: "fms",
-      items: ["Flexible/Electrofab/Modular/Smart Manufacturing System"],
+      items: [
+        ["Flexible/Electrofab/Modular/Smart Manufacturing System", "flexibleelectrofabmodularsmartmanufacturingsystem"],
+      ],
     },
     {
       title: "SVR Innovation",
       link: "svrinnovation",
       items: [
-        "IoT, PLC, Manual Based Electro-Hydraulic System",
-        "IoT, PLC, Manual Based Electro-Pneumatic System",
-        "Elevator Kit",
-        "Bottle Filling Plant",
+        ["IoT, PLC, Manual Based Electro-Hydraulic System", "iotplcmanualbasedelectrohydraulicsystem"],
+        ["IoT, PLC, Manual Based Electro-Pneumatic System", "iotplcmanualbasedelectropneumaticsystem"],
+        ["Elevator Kit", "elevatorkit"],
+        ["Bottle Filling Plant", "bottlefillingplant"],
       ],
     },
     {
       title: "Grippers",
       link: "gripper",
       items: [
-        "3-Jaw Concentric Gripper",
-        "Suction Cup Gripper",
-        "Sensorized Gripper",
-        "Magnetic Gripper",
-        "Gripper Lab",
-        "SVR Garbo 1.2 & 5 (Parallel Jaw)",
-        "SVR Garbo 1.2 & 5 (Curvilinear Jaw)",
-        "Pneumatic 2 & 3 Jaw Gripper",
+        ["3-Jaw Concentric Gripper", "3jawconcentricgripper"],
+        ["Suction Cup Gripper", "suctioncupgripper"],
+        ["Sensorized Gripper", "sensorizedgripper"],
+        ["Magnetic Gripper", "magneticgripper"],
+        ["Gripper Lab", "gripperlab"],
+        ["SVR Garbo 1.2 & 5 (Parallel Jaw)", "svrgarbo1_2and5paralleljaw"],
+        ["SVR Garbo 1.2 & 5 (Curvilinear Jaw)", "svrgarbo1_2and5curvilinearjaw"],
+        ["Pneumatic 2 & 3 Jaw Gripper", "pneumatic2and3jawgripper"],
       ],
     },
     {
       title: "PLC Application",
       link: "plc",
       items: [
-        "VFD Kit",
-        "Elevator Simulation",
-        "Stepper Motor Speed & Direction Control",
-        "Water Level Control",
-        "Conveyor",
-        "Star Delta Starter",
-        "Temperature Control",
+        ["VFD Kit", "vfdkit"],
+        ["Elevator Simulation", "elevatorsimulation"],
+        ["Stepper Motor Speed & Direction Control", "steppermotorspeedanddirectioncontrol"],
+        ["Water Level Control", "waterlevelcontrol"],
+        ["Conveyor", "conveyor"],
+        ["Star Delta Starter", "stardeltastarter"],
+        ["Temperature Control", "temperaturecontrol"],
       ],
     },
     {
       title: "School Robotics Lab",
       link: "schoolinnovation",
       items: [
-        "Maze Solving Robot",
-        "Line Following Robot",
-        "Self-Balancing Robot",
-        "Digital Dice Kit",
-        "Temperature Controlled Fan Kit",
-        "Object Counter",
-        "IoT Robot",
-        "Knight 4.0, 5.0, 10.0",
+        ["Maze Solving Robot", "mazesolvingrobot"],
+        ["Line Following Robot", "linefollowingrobot"],
+        ["Self-Balancing Robot", "selfbalancingrobot"],
+        ["Digital Dice Kit", "digitaldicekit"],
+        ["Temperature Controlled Fan Kit", "temperaturecontrolledfankit"],
+        ["Object Counter", "objectcounter"],
+        ["IoT Robot", "iotrobot"],
+        ["Knight 4.0, 5.0, 10.0", "knight4_0_5_0_10_0"],
       ],
     },
     {
       title: "Software",
       link: "software",
-      items: ["RoboAnalyzer", "MechAnalyzer", "FEAST", "RT Tool Box Software"],
+      items: [
+        ["RoboAnalyzer", "roboanalyzer"],
+        ["MechAnalyzer", "mechanalyzer"],
+        ["FEAST", "feast"],
+        ["RT Tool Box Software", "rttoolboxsoftware"],
+      ],
     },
   ];
+  
 
   return (
     <>
@@ -103,11 +116,11 @@ const ProductPage = () => {
                     <li key={i} className="flex items-center">
                       <span className="bg-orange-500 h-3 w-3 rounded-full inline-block mr-3"></span>
                       <Link
-                        to={`/ProductDetails/${section.link}`}
+                        to={`/Product/${item[1]}`}
                         state={{ stateParam: section }}
                         className="text-lg text-black hover:text-orange-300 transition-colors duration-300"
                       >
-                        {item}
+                        {item[0]}
                       </Link>
                     </li>
                   ))}

@@ -57,7 +57,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  cartesian: {
+  cartesianrobot: {
     title: "Cartesian Robot",
     image: ["path1", "path2", "path3"],
     description: "product description",
