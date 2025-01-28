@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import image from '../assets/AI robot.jpg';
 import Footer from "./Footer.jsx";
@@ -31,7 +32,7 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  scara: {
+  scararobot: {
     title: "Scara Robot",
     image: ['../src/assets/AI robot.jpg', image, image],
     description: "Highly rigid arms and cutting-edge servo controls. Ideal for a wide range of fields, from high-volume production of foodstuffs and pharmaceuticals demanding fast operation to assembly work requiring high levels of precision.",
@@ -88,10 +89,10 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  cartesian: {
+  cartesianrobot: {
     title: "Cartesian Robot",
     image: ["path1", "path2", "path3"],
-    description: "product description",
+    description: "SVR Robotics leverages Cartesian Robots for diverse applications such as pick-and-place tasks, assembly operations, and material handling, ensuring flexibility across various industries.",
     features: ["Precision and Accuracy: Integrated with high-resolution encoders for precise position feedback.", 
       "Custom Automation Solutions: Tailored to meet specific client requirements, optimizing workflows and improving efficiency.",
       "Advanced PLC Integration: Ensures seamless control and coordination of complex tasks.",
@@ -170,7 +171,7 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  jawgripper: {
+  jawconcentricgripper: {
     title: "3-Jaw Concentric Gripper",
     image: ["path1", "path2", "path3"],
     description: "product description",
@@ -191,7 +192,7 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  susctiongripper: {
+  suctioncupgripper: {
     title: "Suction Cup Gripper",
     image: ["path1", "path2", "path3"],
     description: "product description",
@@ -315,7 +316,7 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  pneumaticgripper: {
+  pneumatic2and3jawgripper: {
     title: "Pneumatic 2 & 3 Jaw Gripper",
     image: ["path1", "path2", "path3"],
     description: "product description",
@@ -328,7 +329,7 @@ const ProductInformation = {
     // links: ["abc.com", "xyz.com"],
     // document: ["path1", "path2"],
   },
-  vfd: {
+  vfdkit: {
     title: "VFD Kit",
     image: ["path1", "../src/assets/VFD KIT.jpg", "path3"],
     description: "The VFD kit controls motor speed and direction with additional features like running the motor on time and controlling it in auto or manual modes.",
@@ -510,7 +511,7 @@ const ProductInformation = {
     // links: [],
     // document: ["path1", "path2"],
   },
-  digitaldice: {
+  digitaldicekit: {
     title: "Digital Dice Kit",
     image: ["../src/assets/digitaldice.png", "../src/assets/Digital Dice.jpg", "path3"],
     description: "An electronic kit that simulates the rolling of dice, typically using LEDs and a random number generator.",
@@ -529,7 +530,7 @@ const ProductInformation = {
 
     document: ["path1", "path2"],
   },
-  temperaturecontrolledfan: {
+  temperaturecontrolledfankit: {
     title: "Temperature Controlled Fan Kit",
     image: ["../src/assets/temperaturefankit.png", "../src/assets/Temperature Controlled Fan Kit.JPG", "path3"],
     description: "This application is simple just by using temperature sensor LM35 with an Arduino kit to control a fan with respect to the temperature read by the micro-controller which in this case is the Arduino kit. The temperature sensor LM35 is connected with the Arduino with an analog input pin A0 (the temperature is an analog signal), while the fan is connected with a PWM (Pulse Width Modulation) pin 6 which controls the speed of the fan with respect to the output temperature using a function map in the Arduino IDE.",
@@ -657,7 +658,7 @@ const ProductInformation = {
     links: ["abc.com", "xyz.com"],
     document: ["path1", "path2"],
   },
-  rttoolbox: {
+  rttoolboxsoftware: {
     title: "RT Tool box Software",
     image: ["path1", "psrc/assets/Rt tool box image.png", "path3"],
     description: "product description",
@@ -708,6 +709,10 @@ const SpecificProduct = () => {
   if (!product) {
     return <div className="text-center text-red-500 text-xl mt-10">Product not found</div>;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
   return (
     <>
